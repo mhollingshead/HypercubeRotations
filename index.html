@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+
+<body>
+  <div id="content">
+    <!-- Cube -->
+    <div class="dimension_section">
+      <div style="font-size: 20px; font-weight: 200; color: #33b570">
+        3 Dimensional
+      </div>
+      <div style="font-weight: 600; font-size: 30px;">
+        Cube
+      </div>
+      <div class="spacer"></div>
+      <div style="font-weight: 200; margin-bottom: 5px; color: #c2c2c2">
+        Axes of rotation:
+      </div>
+      <div class="sliderCol" style="text-align: left;">
+        <input type="checkbox" checked="true" onchange="x = this.checked; normalizeCube()" /> X &nbsp;&nbsp;
+        <input type="checkbox" checked="true" onchange="y = this.checked; normalizeCube()" /> Y &nbsp;&nbsp;
+        <input type="checkbox" onchange="z = this.checked; normalizeCube()" /> Z
+      </div>
+      <div id="cube" style="overflow: hidden; width: 100%; height: 100%">
+
+      </div>
+      <div align="center">
+        <table style="margin: auto">
+          <tr>
+            <td class="sliderCol">
+              <span id="3dXnum" class="data"></span><br />
+              <input type="range" orient="vertical" min="-2" max="2" step="0.01" id="3dX" /><br />X
+            </td>
+            <td class="sliderCol">
+              <span id="3dYnum" class="data"></span><br />
+              <input type="range" orient="vertical" min="-2" max="2" step="0.01" id="3dY" /><br />Y
+            </td>
+            <td class="sliderCol">
+              <span id="3dZnum" class="data"></span><br />
+              <input type="range" orient="vertical" min="-2" max="2" step="0.01" id="3dZ" /><br />Z
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <!-- Tesseract -->
+    <div class="dimension_section">
+      <div style="font-size: 20px; font-weight: 200; color: #33b570">
+        4 Dimensional
+      </div>
+      <div style="font-weight: 600; font-size: 30px;">
+        Tesseract
+      </div>
+      <div class="spacer"></div>
+      <div style="font-weight: 200; margin-bottom: 5px; color: #c2c2c2">
+        Planes of rotation:
+      </div>
+      <div class="sliderCol" style="text-align: left;">
+        <input type="checkbox" checked="true" onchange="xy = this.checked" /> XY &nbsp;&nbsp;
+        <input type="checkbox" onchange="xw = this.checked" /> XW &nbsp;&nbsp;
+        <input type="checkbox" checked="true" onchange="zw = this.checked" /> ZW
+      </div>
+      <div id="cubeArea" style="overflow: hidden; width: 100%; height: 100%">
+
+      </div>
+      <div align="center">
+        <table style="margin: auto">
+          <tr>
+            <td class="sliderCol">
+              <span id="4dXnum" class="data"></span><br />
+              <input type="range" orient="vertical" min="-2" max="2" step="0.01" id="4dX" /><br />X
+            </td>
+            <td class="sliderCol">
+              <span id="4dYnum" class="data"></span><br />
+              <input type="range" orient="vertical" min="-2" max="2" step="0.01" id="4dY" /><br />Y
+            </td>
+            <td class="sliderCol">
+              <span id="4dZnum" class="data"></span><br />
+              <input type="range" orient="vertical" min="-2" max="2" step="0.01" id="4dZ" /><br />Z
+            </td>
+            <td class="sliderCol">
+              <span id="4dWnum" class="data"></span><br />
+              <input type="range" orient="vertical" min="-2" max="2" step="0.01" id="4dW" /><br />W
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <!-- Penteract -->
+    <div class="dimension_section">
+      <div style="font-size: 20px; font-weight: 200; color: #33b570">
+        5 Dimensional
+      </div>
+      <div style="font-weight: 600; font-size: 30px;">
+        Penteract
+      </div>
+      <div class="spacer"></div>
+      <div style="font-weight: 200; margin-bottom: 5px; color: #c2c2c2">
+        Hyperplanes of rotation:
+      </div>
+      <div class="sliderCol" style="text-align: left;">
+        <input type="checkbox" checked="true" onchange="xyz = this.checked" /> XYZ &nbsp;&nbsp;
+        <input type="checkbox" checked="true" onchange="xyv = this.checked" /> XYV &nbsp;&nbsp;
+        <input type="checkbox" onchange="xwv = this.checked" /> XWV &nbsp;&nbsp;
+        <input type="checkbox" checked="true" onchange="zwv = this.checked" /> ZWV
+      </div>
+      <div id="cubeArea5D" style="overflow: hidden; width: 100%; height: 100%">
+
+      </div>
+      <div align="center">
+        <table style="margin: auto">
+          <tr>
+            <td class="sliderCol">
+              <span id="5dXnum" class="data"></span><br />
+              <input type="range" orient="vertical" min="-2" max="2" step="0.01" id="5dX" /><br />X
+            </td>
+            <td class="sliderCol">
+              <span id="5dYnum" class="data"></span><br />
+              <input type="range" orient="vertical" min="-2" max="2" step="0.01" id="5dY" /><br />Y
+            </td>
+            <td class="sliderCol">
+              <span id="5dZnum" class="data"></span><br />
+              <input type="range" orient="vertical" min="-2" max="2" step="0.01" id="5dZ" /><br />Z
+            </td>
+            <td class="sliderCol">
+              <span id="5dWnum" class="data"></span><br />
+              <input type="range" orient="vertical" min="-2" max="2" step="0.01" id="5dW" /><br />W
+            </td>
+            <td class="sliderCol">
+              <span id="5dVnum" class="data"></span><br />
+              <input type="range" orient="vertical" min="-2" max="2" step="0.01" id="5dV" /><br />V
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <!-- Hexeract -->
+    <!--<div class="dimension_section">
+      <div  style="font-size: 20px; font-weight: 200; color: #33b570">
+        6 Dimensional
+      </div>
+      <div style="font-weight: 600; font-size: 30px;">
+        Hexeract
+      </div>
+      <div class="spacer"></div>
+      <div style="font-weight: 200; margin-bottom: 5px; color: #c2c2c2">
+        Hyperplanes of rotation:
+      </div>
+      <div class="sliderCol" style="text-align: left;">
+        <input type="checkbox" checked="true" onchange="xyzw = this.checked;"/> XYZW &nbsp;
+        <input type="checkbox" checked="true" onchange="xyzu = this.checked;"/> XYZU &nbsp;
+        <input type="checkbox" checked="true" onchange="xyvu = this.checked;"/> XYVU &nbsp;
+        <input type="checkbox" checked="true" onchange="xwvu = this.checked;"/> XWVU &nbsp;
+        <input type="checkbox" checked="true" onchange="zwvu = this.checked;"/> ZWVU
+
+      </div>
+      <div id="cube6d" style="overflow: hidden; width: 100%; height: 100%">
+
+      </div>
+      <div align="center">
+        <table style="margin: auto">
+          <tr>
+            <td class="sliderCol">
+              <span id="6dXnum" class="data"></span><br/>
+              <input type="range" orient="vertical" min="-2" max="2" step="0.01" id="6dX"/><br/>X
+            </td>
+            <td class="sliderCol">
+              <span id="6dYnum" class="data"></span><br/>
+              <input type="range" orient="vertical" min="-2" max="2" step="0.01" id="6dY"/><br/>Y
+            </td>
+            <td class="sliderCol">
+              <span id="6dZnum" class="data"></span><br/>
+              <input type="range" orient="vertical" min="-2" max="2" step="0.01" id="6dZ"/><br/>Z
+            </td>
+            <td class="sliderCol">
+              <span id="6dWnum" class="data"></span><br/>
+              <input type="range" orient="vertical" min="-2" max="2" step="0.01" id="6dW"/><br/>W
+            </td>
+            <td class="sliderCol">
+              <span id="6dVnum" class="data"></span><br/>
+              <input type="range" orient="vertical" min="-2" max="2" step="0.01" id="6dV"/><br/>V
+            </td>
+            <td class="sliderCol">
+              <span id="6dUnum" class="data"></span><br/>
+              <input type="range" orient="vertical" min="-2" max="2" step="0.01" id="6dU"/><br/>U
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="spacer"></div>
+      <table class="stats">
+        <tr>
+          <td class="label">
+            Vertices:
+          </td>
+          <td class="num">
+            8
+          </td>
+        </tr>
+        <tr>
+          <td class="label">
+            Edges:
+          </td>
+          <td class="num">
+            12
+          </td>
+        </tr>
+        <tr>
+          <td class="label">
+            Faces:
+          </td>
+          <td class="num">
+            6
+          </td>
+        </tr>
+      </table>
+    </div>-->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r124/three.min.js" integrity="sha512-jeYvJdyAYkpQCY/omvCYQo89qA5YxDW4JBT7COPsHT2sOAanwxkZRFeP9gc69b5reSDpZIoyCqZQZcWZkbB5Gw==" crossorigin="anonymous"></script>
+  <script src="js/vector.js"></script>
+  <script src="js/3d.js"></script>
+  <script src="js/4d.js"></script>
+  <script src="js/5d.js"></script>
+  <!--<script src="js/6d.js"></script>-->
+  <script src="js/index.js"></script>
+</body>
+
+</html>

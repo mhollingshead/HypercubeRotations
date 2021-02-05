@@ -1,0 +1,114 @@
+body {
+  font-family: sans-serif;
+  background: #262626;
+  color: white;
+}
+
+#cube,
+#cubeArea,
+#cubeArea5D,
+#cube6d {
+  background: #212121;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+td {
+  padding: 20px;
+  vertical-align: top;
+}
+
+td.sliderCol {
+  width: 40px;
+}
+
+p {
+  color: #c2c2c2;
+  line-height: 20px;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 200;
+  color: #33b570;
+}
+
+.math {
+  font-family: "Times New Roman";
+  font-style: italic;
+}
+
+.spacer {
+  border-bottom: 1px solid black;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  opacity: 0.2;
+}
+
+.dimension_section {
+  width: 300px;
+  display: inline-block;
+  padding: 20px;
+  margin: auto;
+}
+
+#content {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin: auto;
+  max-width: 1030px;
+}
+#about {
+  margin-top: 20px;
+}
+
+input[type=range][orient=vertical] {
+  writing-mode: bt-lr;
+  /* IE */
+  -webkit-appearance: slider-vertical;
+  /* WebKit */
+  width: 8px;
+  height: 150px;
+  padding: 0 5px;
+  overflow: hidden;
+  background: transparent;
+  pointer-events: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+input {
+  filter: hue-rotate(-70deg) brightness(1);
+}
+
+.sliderCol {
+  padding: 3px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.data {
+  background: #212121;
+  border-radius: 5px;
+  padding: 3px;
+  color: #33b570;
+}
+
+.stats td {
+  padding: 5px;
+  vertical-align: bottom;
+}
+
+.label {
+  text-align: right;
+  color: #c2c2c2;
+  font-weight: 200;
+}
+
+.num {
+  font-weight: 600;
+  font-size: 14px;
+}
